@@ -1,0 +1,25 @@
+ececeb --- Gray
+f9a828 --- Golden rod
+07617d --- Denim blue
+2e383f --- Midnight blue
+ff6f3c --- Orange 
+Main Pallette 
+https://colorhunt.co/palette/108676
+Secondary 
+https://colorhunt.co/palette/93362
+
+
+font-family: 'Cinzel', serif;
+font-family: 'Cormorant Unicase', serif;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Michroma', sans-serif;
+font-family: 'Poiret One', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Voltaire', sans-serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Gruppo', cursive;
+font-family: 'Cormorant SC', serif;
+font-family: 'Wire One', sans-serif;
+font-family: 'Brawler', serif;
+font-family: 'Iceland', cursive;
+font-family: 'Chonburi', cursive;

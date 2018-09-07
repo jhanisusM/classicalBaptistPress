@@ -1,0 +1,179 @@
+body,html {
+    height: 100%;
+    margin: 0;
+}
+
+
+/* navbar */
+/* ====================================================================== */
+.navbar{
+    color: #ffffff;
+    background-color: #2e383f
+}
+
+.navbar-header{
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.navbar .navbar-nav .nav-link:not(.disabled):hover{
+    color: #ffffff;
+    
+}
+
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+    
+    color: #ffffff;
+    background-color: #2e383f;
+}
+
+li a:hover { 
+    color: #ffffff;
+    /* background-color: #07617d;  */
+}
+
+
+   
+/* parallax Effect  */
+/* ====================================================================== */
+.bgimg-1,.bgimg-2,.bgimg-3,.bgimg-4 {
+    position: relative;
+    opacity: 0.75;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url("../images/books.jpg");
+    min-height: 100%;
+    filter: grayscale(90%);
+}
+
+.bgimg-2 {
+    background-image: url("../images/la2.jpg");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("../images/la6.jpg");
+    min-height: 400px;
+}
+
+/* Welcome name */
+/* ====================================================================== */
+.caption {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    color: rgb(40, 46, 52);
+}
+
+.caption {
+    color: #ffffff;
+    /* padding: 18px; */
+    font-size: 80px;
+    /* letter-spacing: 2px;     */
+font-family: 'Cinzel', serif;
+/* font-family: 'Cinzel Decorative', cursive; */
+
+}
+
+
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: rgb(17, 17, 17);
+   }
+   
+
+
+.about{
+    color: black;background-color:rgb(255, 255, 255);
+    text-align:center;padding:50px 80px;
+    text-align: justify;
+}
+.port{
+    color:rgb(221, 221, 221);
+    background-color:rgb(40, 46, 52);
+    text-align:center;padding:50px 80px;
+    text-align: justify;
+}
+.contact {
+    color:rgb(221, 221, 221);
+    background-color:rgb(40, 46, 52);
+}
+.footer {
+    color:rgb(221, 221, 221);
+    background-color:rgb(40, 46, 52);
+    text-align: justify;
+    text-align: center;
+}
+
+
+
+
+
+#spanStyle{
+    background-color:transparent;
+    font-size:25px;
+    color: rgb(247, 247, 247);
+}
+
+/* ====================================================================== */
+#map {
+    width: 300px;
+    height: 400px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    margin: 10px
+}
+/* hr in contact me
+====================================================================== */
+#hrcontact{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+/* Contact style */
+/* ====================================================================== */
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid rgb(247, 247, 247);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+
+
+@media screen and (min-width:360px) and (max-width:439px){
+    .caption {
+        /* float: left; */
+        /* width: 33.33%; */
+        width: auto;
+        height: auto;
+        top: 35%;
+        padding: 10px;
+        margin: 10px;
+        font-size: 40px;
+     
+        /* display: none; */
+         /* Hide all elements by default */
+    }
+
+}
