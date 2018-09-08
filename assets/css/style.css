@@ -45,19 +45,26 @@ li a:hover {
 }
 
 
-
-
-
 .secTitle{
-    color: black;background-color:rgb(255, 255, 255);
-    text-align:center;padding:50px 80px;
-    text-align: justify;
-    margin-top: 10px;
+    color: black;
+    text-align: center;
+    padding:50px 80px;
     font-family: 'Cardo', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 
 
+img{
+width: 100%;
+
+}
+.image{
+    text-align: center;
+width: 800px;
+
+}
 
 
 
@@ -122,12 +129,7 @@ li a:hover {
 
 }
 
-h3 {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
-    color: rgb(17, 17, 17);
-   }
+
    
 
 
