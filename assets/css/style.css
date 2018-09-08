@@ -7,7 +7,8 @@ body,html {
 /* ====================================================================== */
 .navbar{
     color: #ffffff;
-    background-color: #2e383f
+    background-color: #2e383f;
+    font-family: 'Cardo', serif;
 }
 
 .navbar-header{
@@ -16,22 +17,16 @@ body,html {
 
 .navbar .navbar-nav .nav-link:not(.disabled):hover{
     color: #ffffff;
-    
-}
-
-.navbar .navbar-nav .nav-link:not(.disabled):focus {
-    
-    color: #ffffff;
-    background-color: #2e383f;
 }
 
 li a:hover { 
     color: #ffffff;
-    /* background-color: #07617d;  */
+    background-color: #ff6f3c;
+    font-family: 'Cardo', serif;
 }
 
 
-   
+
 /* parallax Effect  */
 /* ====================================================================== */
 .parallax-1,.bgimg-2,.bgimg-3,.bgimg-4 {
@@ -53,34 +48,18 @@ li a:hover {
 
 
 
+.secTitle{
+    color: black;background-color:rgb(255, 255, 255);
+    text-align:center;padding:50px 80px;
+    text-align: justify;
+    margin-top: 10px;
+    font-family: 'Cardo', serif;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* 
-.card {
-    background-size: cover;
-    background-position: center;
-    background-clip: content-box;
-    border: 6px solid white;
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    position: relative;
-    margin: 0 auto;
-    margin-top: 30px;
-  } */
 
 
 
@@ -152,11 +131,6 @@ h3 {
    
 
 
-.about{
-    color: black;background-color:rgb(255, 255, 255);
-    text-align:center;padding:50px 80px;
-    text-align: justify;
-}
 .port{
     color:rgb(221, 221, 221);
     background-color:rgb(40, 46, 52);
