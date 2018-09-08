@@ -3,7 +3,6 @@ body,html {
     margin: 0;
 }
 
-
 /* navbar */
 /* ====================================================================== */
 .navbar{
@@ -35,7 +34,7 @@ li a:hover {
    
 /* parallax Effect  */
 /* ====================================================================== */
-.bgimg-1,.bgimg-2,.bgimg-3,.bgimg-4 {
+.parallax-1,.bgimg-2,.bgimg-3,.bgimg-4 {
     position: relative;
     opacity: 0.75;
     background-attachment: fixed;
@@ -44,11 +43,63 @@ li a:hover {
     background-size: cover;
 }
 
-.bgimg-1 {
+.parallax-1{
     background-image: url("../images/books.jpg");
     min-height: 100%;
     filter: grayscale(90%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.card {
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    border: 6px solid white;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+  } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bgimg-2 {
     background-image: url("../images/la2.jpg");
@@ -68,20 +119,29 @@ li a:hover {
     top: 35%;
     width: 100%;
     text-align: center;
-    color: rgb(40, 46, 52);
-}
-
-.caption {
     color: #ffffff;
-    /* padding: 18px; */
     font-size: 80px;
+    font-family: 'Cinzel', serif;
     /* letter-spacing: 2px;     */
-font-family: 'Cinzel', serif;
-/* font-family: 'Cinzel Decorative', cursive; */
-
+    /* padding: 18px; */
 }
 
+@media screen and (min-width:360px) and (max-width:439px){
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 35%;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        font-size: 40px;
+        font-family: 'Cinzel', serif;
+     
+        /* display: none; */
+         /* Hide all elements by default */
+    }
 
+}
 
 h3 {
     letter-spacing: 5px;
@@ -113,6 +173,27 @@ h3 {
     text-align: justify;
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,19 +242,3 @@ input[type=text]:focus {
 
 
 
-@media screen and (min-width:360px) and (max-width:439px){
-    .caption {
-        /* float: left; */
-        /* width: 33.33%; */
-        width: auto;
-        height: auto;
-        top: 35%;
-        padding: 10px;
-        margin: 10px;
-        font-size: 40px;
-     
-        /* display: none; */
-         /* Hide all elements by default */
-    }
-
-}
