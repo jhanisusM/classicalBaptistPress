@@ -66,8 +66,8 @@ img{
 }
 
 .bodyText{
-
-    text-align: justify;
+    margin: 2px;
+    /* text-align: justify; */
     font-size: 19px;
     font-family: 'Braler', serif;
 }
