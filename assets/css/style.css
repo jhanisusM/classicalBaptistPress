@@ -41,7 +41,7 @@ li a:hover {
 .parallax-1{
     background-image: url("../images/books.jpg");
     min-height: 100%;
-    width: auto;
+    width: 100%;
     filter: grayscale(57%);
 }
 
@@ -62,7 +62,7 @@ li a:hover {
 }
 .pimage{
     text-align: center;
-    width: 400px;
+    width: 100%;
 
 }
 
