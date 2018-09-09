@@ -41,6 +41,7 @@ li a:hover {
 .parallax-1{
     background-image: url("../images/books.jpg");
     min-height: 100%;
+    width: auto;
     filter: grayscale(57%);
 }
 
@@ -56,12 +57,12 @@ li a:hover {
 
 
 #pastor{
-    width: 100%;
+    width: auto;
 
 }
 .pimage{
     text-align: center;
-    width: 800px;
+    width: 400px;
 
 }
 
