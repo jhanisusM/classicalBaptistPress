@@ -29,7 +29,7 @@ li a:hover {
 
 /* parallax Effect  */
 /* ====================================================================== */
-.parallax-1{
+.parallax{
     position: relative;
     opacity: 0.91;
     background-attachment: fixed;
@@ -41,7 +41,6 @@ li a:hover {
 .parallax-1{
     background-image: url("../images/books.jpg");
     min-height: 100%;
-    width: auto;
     filter: grayscale(57%);
 }
 
@@ -56,18 +55,13 @@ li a:hover {
 }
 
 
-#pastor{
-    width: auto;
-
-}
-.pimage{
+.aboutImage{
     text-align: center;
-    width: 100%;
-
 }
+
 
 .bodyText{
-    margin: 2px;
+    /* margin: 1px; */
     /* text-align: justify; */
     font-size: 19px;
     font-family: 'Braler', serif;
@@ -102,5 +96,9 @@ li a:hover {
         background-color: rgba(255, 81, 0,0.7);
     }
 
+    .parallax-1{
+        background-attachment: scroll;
+
+    }
 }
 
