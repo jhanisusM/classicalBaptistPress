@@ -61,10 +61,9 @@ li a:hover {
 
 
 .bodyText{
-    /* margin: 1px; */
-    /* text-align: justify; */
-    font-size: 19px;
+    font-size: 20px;
     font-family: 'Braler', serif;
+    /* font-family: 'Sorts Mill Goudy', serif; */
 }
 
 
@@ -101,4 +100,5 @@ li a:hover {
 
     }
 }
+
 
