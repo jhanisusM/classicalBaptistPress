@@ -16,6 +16,7 @@ font-family: 'Braler', serif;
 johnswaldrip@classicalbaptist.press
 goDaddy
 customer ID: 182206467
+password: 1929IrisA
 user nam: john.waldrip@gmail.com 
 PIN: 8590
 
