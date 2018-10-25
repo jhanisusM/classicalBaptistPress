@@ -83,7 +83,7 @@ li a:hover {
     background-color: rgba(255, 81, 0,0.77);
 }
 
-@media screen and (min-width:360px) and (max-width:439px){
+@media screen and (min-width:300px) and (max-width:439px){
     .caption {
         position: absolute;
         left: 0;
@@ -102,5 +102,3 @@ li a:hover {
     }
     
 }
-
-
