@@ -5,100 +5,93 @@ body,html {
 
 /* navbar */
 /* ====================================================================== */
-.navbar{
-    color: #ffffff;
-    background-color: #2e383f;
-    font-family: 'Cardo', serif;
-}
-
-.navbar-header{
+.logo{
     font-family: 'Cinzel Decorative', cursive;
-}
-
-.navbar .navbar-nav .nav-link:not(.disabled):hover{
-    color: #ffffff;
-}
-
-li a:hover { 
-    color: #ffffff;
-    background-color: #ff6f3c;
-    font-family: 'Cardo', serif;
+    font-size: 30px;
 }
 
 
+.parallax-container {
+    height: 65%;
+  }
 
-/* parallax Effect  */
-/* ====================================================================== */
-.parallax{
-    position: relative;
-    opacity: 0.91;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax-1{
-    background-image: url("../images/books.jpg");
-    min-height: 100%;
-    filter: grayscale(57%);
+.section {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
 }
 
 
 .secTitle{
-    color: black;
-    text-align: center;
-    padding-top: 40px ;
     font-family: 'Cardo', serif;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
-
-.aboutImage{
-    margin-right: 15px;
-    margin-bottom: 15px;
-    float: left;
-}
-
-
-.bodyText{
-    font-size: 20px;
-    font-family: 'Braler', serif;
-    /* font-family: 'Sorts Mill Goudy', serif; */
-}
 
 
 /* Welcome name */
 /* ====================================================================== */
 .caption {
     position: absolute;
-    left: 0;
-    top: 35%;
+    top: 22%;
     width: 100%;
     text-align: center;
     color: #ffffff;
-    font-size: 80px;
+    font-size: 55px;
     font-family: 'Cinzel', serif;
     background-color: rgba(255, 81, 0,0.77);
 }
 
-@media screen and (min-width:300px) and (max-width:439px){
+/* Small Screens */
+@media screen and (min-width:300px) and (max-width:349px){
+    .logo{
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 12px;
+    }
+    .caption {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 'Cinzel', serif;
+    background-color: rgba(255, 81, 0,0.77);
+    }  
+}
+
+/* Mid */
+@media screen and (min-width:350px) and (max-width:439px){
+    .logo{
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 17px;
+    }
+
+    .caption {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Cinzel', serif;
+    background-color: rgba(255, 81, 0,0.77);
+    }   
+}
+/* Tablets */
+/* @media screen and (min-width:440px) and (max-width:1024px){
+    .logo{
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 25px;
+    }
     .caption {
         position: absolute;
-        left: 0;
-        top: 35%;
+        top: 25%;
         width: 100%;
         text-align: center;
         color: #ffffff;
-        font-size: 40px;
+        font-size: 35px;
         font-family: 'Cinzel', serif;
-        background-color: rgba(255, 81, 0,0.7);
-    }
-
-    .parallax-1{
-        background-attachment: scroll;
-
-    }
-    
-}
+        background-color: rgba(255, 81, 0,0.77);
+    } 
+} */
