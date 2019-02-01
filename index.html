@@ -1,139 +1,127 @@
+<!DOCTYPE html>
+
 <html lang="en-US">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Classical Baptist Press </title>
-    <!-- Meta tags -->
-    <meta name="description" content="The purpose of CBP is to embrace, encourage and educate believers who are committed to living the Great Commission through the Gospel, evangelism and the publication of Biblical writings." />
-    <meta name="keywords" content="Jesus Christ, Baptist, Gospel preaching, Gospel, Bible, Evangelism, Christian, " />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="" />
-    <meta name="googlebot" content="" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="Website" />
-    <meta property="og:title" content="Classical Baptist Press" />
-    <meta property="og:description" content="The purpose of CBP is to embrace, encourage and educate believers who are committed to living the Great Commission through the Gospel, evangelism and Biblical writings.  " />
-    <meta property="og:url" content="http://classicalbaptist.press/">
-    <meta property="og:image" content="http://classicalbaptist.press/assets/images/books.jpg" />
-    <meta name="twitter:title" content="Classical Baptist Press" />
-    <meta name="twitter:description" content="" />
+    <!--Google library-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Cinzel+Decorative|Cinzel" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- css main style -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-
-    <script src="assets/js/main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Brawler|Cardo|Braler|Cinzel+Decorative|Cinzel|Sorts+Mill+Goudy"
-        rel="stylesheet">
 </head>
 
 <body>
-    <!--Navegation Bar-->
-    <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="./index.html"> Classical Baptist Press</a>
-                </div>
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" />
-                </button>
-                <div class="collapse navbar-collapse " id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about"> <span class="fa fa-user"></span> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./publications.html"><span class="fa fa-book"></span>
-                                Publications</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact.html"><span class="fa fa-comment"></span> Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <!--Navigation Bar -->
+        <nav class="nav-wrapper blue-grey darken-3">
+            <div class="container">
+                <a href="./index.html" class="brand-logo" id="logo"> <i class=" material-icons left">blur_on</i> Classical Baptist Press </a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#about" ><i class="small material-icons left "> blur_linear</i>About</a></li>
+                    <li><a href="./publication.html" ><i class="small material-icons left"> book</i>Publications </a></li>
+                    <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
+                    <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
+                </ul>
+
             </div>
         </nav>
-    </div>
+        <!--Navigation Collapse menue-->
+        <ul class="sidenav" id="mobile-links">
+                <li><a href="#about" ><i class="small material-icons left "> blur_linear</i>About</a></li>
+                <li><a href="./publication.html" ><i class="small material-icons left"> book</i>Publications </a></li>
+                <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
+                <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
+        </ul>
 
-
-    <!-- Main body -->
-    <div class="container-fluid">
-        <!-- Classical Baptist Press intro -->
-        <div class="row parallax parallax-1">
-            <div class="">
-                <div class=" caption">
-                    <div>
+<!--Paralax-->
+    <div class="parallax-container">
+            <div class="parallax">
+                <img src="./assets/images/books.jpg" alt="Books" class="responsive-img" />
+                <div class="caption">
                         <p>Classical <br /> Baptist Press</p>
-                    </div>
                 </div>
+            </div>
+        </div>
 
-            </div>
-        </div>
-        <!-- About title section  -->
-        <div class="row" id="about">
-            <div class="col">
-                <br>
-                <br>
-                <div class="secTitle">
-                    <h3>About</h3>
-                </div>
-            </div>
-        </div>
-        <hr />
-        <!-- About title Body -->
+    <!--Main Body-->
+    <section class="container section scrollspy" id="about">
         <div class="row">
-
-            <!-- <div class="row"> -->
-            <div class="col-lg-11 bodyText">
-                <br />
-                <img class="img-fluid aboutImage" src="./assets/images/image1.jpg" alt="Pastor's Favorite Picture" />
-                <p>
-                    <strong>
-                        What Is A Classical Baptist Church?
-                        By Dr. John S. Waldrip
-                    </strong>
-
-                </p>
-                <p>
-                    Classical Baptist Press exists to bless the family of God, but especially Baptists who are
-                    committed to Gospel preaching, biblical evangelism, the reality of a sinner’s depravity, the new
-                    birth as a transformative miracle wrought by the Holy Spirit in the life of the sinner who comes to
-                    Jesus Christ in response to his exposure to the Gospel message, strongly resisting the tendency to
-                    be tossed about by every wind of change and the latest fads, and rejecting the Protestant view of
-                    the Church set forth in the Westminster Confession of Faith.
-                </p>
-                <p>
-                    Further, we seek to encourage and educate believers to embrace missionary Baptist convictions,
-                    recognizing our Great Commission is
-                    rightly obeyed when Christians render service to Christ to, through and from congregations where
-                    there is accountability, the administration of the two ordinances, properly administered
-                    discipline, and when congregations are involved in starting other Churches to carry out the Great
-                    Commission in other places.
-                </p>
+            <h3 class="secTitle center blue-grey-text text-darken-3" id="header">About</h3>
+            <hr>
+            <br>
+            <div class="col s12 l4">
+                <img src="./assets/images/image1.jpg" alt="Pastor_Pic" class="responsive-img materialboxed">
                 <br>
-                <p style="text-align:center">
-                    <img src="./assets/images/radio.jpg" alt="According to thy word" class="img-fluid">
-                </p>
             </div>
+            <div class=" col s12 l6 offset-l1">
+                <strong>
+                    What Is A Classical Baptist Church?
+                    By Dr. John S. Waldrip
+                </strong>
+                <p>
+                    Classical Baptist Press was established by Dr. John S. Waldrip in 2018 to be a platform for 
+                    the publication of classical Baptist writings. The mission of Classical Baptist Press is to
+                    be a blessing to the family of God. Especially Baptists who are committed to Gospel preaching, 
+                    biblical evangelism, and the depraved sinner’s new birth transformation by the Holy Spirit. 
+                    Classical Baptist Press desires to strongly resist the tendency to be tossed about by every 
+                    wind of change, the latest fads, and reject the Protestant view of the Church set forth in 
+                    the Westminster Confession of Faith.
+                </p>
+                <p>
+                    Further, Classical Baptist Press seeks to educate and convict believers to recognize and embrace 
+                    the Great Commission. Where there is accountability in the local church and when congregations are 
+                    involved in starting other Churches to carry out the Great Commission, at home and in other places, 
+                    the two ordinances are rightly obeyed when Christians render service to Christ.
+                </p>
+                <p>
+                    The purpose of CBP is to embrace, encourage and educate believers who are committed to living the 
+                    Great Commission through the Gospel, evangelism and the publication of Biblical writings.
+                </p>
+
+                <button class="btn waves-effect  blue-grey darken-3 waves-light" ><a href="./moreAbout.html" class="white-text"> Read More</a>
+                        <i class="material-icons right">import_contacts</i>
+                </button>
+
+
+                <p style="text-align:center">
+                    <a href="https://www.firstloveradio.org/" class="" target="blank"> <img src="./assets/images/radio.jpg" alt="According to thy word" class="responsive-img "></a>
+                </p>
+                <button class="btn waves-effect  blue-grey darken-3 waves-light" ><a href="https://www.firstloveradio.org/" class="white-text" target="blank"> Listen Live!</a>
+                        <i class="material-icons right">headset</i>
+                </button>
+            </div>
+
         </div>
-
-
-    </div>
+    </section>
     <hr />
-    <footer style="text-align: center">
-        <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
+    <!--Footer-->
+    <footer class="page-footer transparent">
+        <div class="container center">
+            <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
+        </div>
+        <div class="footer-copyright blue-grey darken-3">
+                <div class="container center-align">&copy; 2019 Classical Baptist Press</div>
+            </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>$(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.scrollspy').scrollSpy();
+        })</script>
 </body>
 
 </html>
