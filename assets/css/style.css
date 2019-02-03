@@ -29,6 +29,10 @@ body,html {
 }
 
 
+iframe{
+    width:560px; 
+    height:315px;
+}
 
 /* Welcome name */
 /* ====================================================================== */
@@ -69,6 +73,10 @@ body,html {
     font-family: 'Cinzel', serif;
     background-color: rgba(255, 81, 0,0.77);
     }  
+    iframe{
+        width:270px; 
+        height:250px;
+    }
 }
 
 /* Mid */
@@ -95,6 +103,12 @@ body,html {
     font-family: 'Cinzel', serif;
     background-color: rgba(255, 81, 0,0.77);
     }   
+
+    iframe{
+        width:320px; 
+        height:250px;
+    }
+  
 }
 
 
@@ -116,6 +130,11 @@ body,html {
         font-family: 'Cinzel', serif;
         background-color: rgba(255, 81, 0,0.77);
         } 
+
+        iframe{
+            width:460px; 
+            height:315px;
+        }
 }
 
 .indentation{
