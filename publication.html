@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- css main style -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3"></script>
 </head>
 
 <body>
+
     <!--Navigation Bar -->
     <header>
         <nav class="nav-wrapper blue-grey darken-3">
@@ -61,35 +64,69 @@
             <hr>
             <br>
         </div>
+        <!-- 28 Truths -->
         <div class="row">
             <div class="col s12 l4 push-l7 offset-l1">
                 <img src="assets/images/28.JPG" alt="portrait" class="responsive-img materialboxed">
                 <br>
-                <!-- <button class="btn blue-grey darken-3"><a href="#"
-                        class="white-text" target="blank"> Click to Purchase</a>
+                <button class="btn blue-grey darken-3" id="checkout-button-sku_FmzE9du2jC7IGE" role="link">
+                    <a href="" class=" white-text modal-trigger"> Click to
+                        Purchase</a>
                     <i class="material-icons right">shopping_cart</i>
-                </button> -->
+                </button>
+                <script>
+                    var stripe = Stripe('pk_live_uVdFif1mqEmv2Qh53qBTTjRC00qWWfmIvH');
+
+                    var checkoutButton = document.getElementById('checkout-button-sku_FmzE9du2jC7IGE');
+                    checkoutButton.addEventListener('click', function () {
+                        // When the customer clicks on the button, redirect
+                        // them to Checkout.
+                        stripe.redirectToCheckout({
+                            items: [{ sku: 'sku_FmzE9du2jC7IGE', quantity: 1 }],
+
+                            // Do not rely on the redirect to the successUrl for fulfilling
+                            // purchases, customers may not always reach the success_url after
+                            // a successful payment.
+                            // Instead use one of the strategies described in
+                            // https://stripe.com/docs/payments/checkout/fulfillment
+                            successUrl: window.location.protocol + '//classicalbaptist.press/success',
+                            cancelUrl: window.location.protocol + '//classicalbaptist.press/canceled',
+                        })
+                            .then(function (result) {
+                                if (result.error) {
+                                    // If `redirectToCheckout` fails due to a browser or network
+                                    // error, display the localized error message to your customer.
+                                    var displayError = document.getElementById('error-message');
+                                    displayError.textContent = result.error.message;
+                                }
+                            });
+                    });
+                </script>
             </div>
+
             <div class="col s12 l6 pull-l5 right-align offset-l1">
-                <h3 class="blue-grey-text text-darken-3">The Church of Jesus Christ. 28 Truths. Every Christian ought to learn</h3>
-                <strong> Kindle Edition </strong>
+                <h3 class="blue-grey-text text-darken-3">The Church of Jesus Christ. 28 Truths. Every Christian ought to
+                    learn</h3>
+                <strong></strong>
                 <h5>By Dr. John S. Waldrip (Author), Th.D.</h5>
                 <hr />
                 <p class="card-panel">
-                    An exhaustive guide to the New Testament's Teaching into the nature of the Church of Jesus Christ.  
+                    An exhaustive guide to the New Testament's Teaching into the nature of the Church of Jesus Christ.
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col s12 l4">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51zMJt%2BS1wL.jpg" alt="portrait" class="responsive-img materialboxed">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51zMJt%2BS1wL.jpg" alt="portrait"
+                    class="responsive-img materialboxed">
                 <br>
-                <button class="btn blue-grey darken-3"><a href="https://www.amazon.com/Suffer-Children-tragic-legacies-Bushnell-ebook/dp/B072FHM89F"
+                <button class="btn blue-grey darken-3"><a
+                        href="https://www.amazon.com/Suffer-Children-tragic-legacies-Bushnell-ebook/dp/B072FHM89F"
                         class="white-text" target="blank"> Click to Purchase</a>
                     <i class="material-icons right">shopping_cart</i>
                 </button>
             </div>
-           
+
             <div class="col s12 l6 offset-l1">
                 <h3 class="blue-grey-text text-darken-3">Suffer The Children: (The tragic legacies of Finney &
                     Bushnell)</h3>
@@ -110,9 +147,11 @@
         </div>
         <div class="row">
             <div class="col s12 l4 push-l7 offset-l1">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51yzWq3Z%2B6L.jpg" alt="portrait" class="responsive-img materialboxed">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51yzWq3Z%2B6L.jpg" alt="portrait"
+                    class="responsive-img materialboxed">
                 <br>
-                <button class="btn blue-grey darken-3"><a href="https://www.amazon.com/Blight-Islam-Revised-John-Waldrip-ebook/dp/B07HLLNHCC/ref=sr_1_2?s=digital-text&ie=UTF8&qid=1548830906&sr=1-2"
+                <button class="btn blue-grey darken-3"><a
+                        href="https://www.amazon.com/Blight-Islam-Revised-John-Waldrip-ebook/dp/B07HLLNHCC/ref=sr_1_2?s=digital-text&ie=UTF8&qid=1548830906&sr=1-2"
                         class="white-text" target="blank"> Click to Purchase</a>
                     <i class="material-icons right">shopping_cart</i>
                 </button>
@@ -142,21 +181,22 @@
 
             </div>
             <div class="col s12 l6 offset-l1">
-                <h3 class="blue-grey-text text-darken-3">Polemic Theology: How To Deal With Those Who Differ From Us</h3>
+                <h3 class="blue-grey-text text-darken-3">Polemic Theology: How To Deal With Those Who Differ From Us
+                </h3>
                 <!-- <h4>Suffer The Children: (The tragic legacies of Finney & Bushnell) </h4> -->
                 <h5>By Roger Nicole (Author)</h5>
                 <hr />
                 <ul class="collapsible card-panel">
                     <li>
                         <div class="collapsible-header"> <i class="material-icons right">import_contacts</i>
-                                Who does not encounter from time to time people who are not in complete agreement?
-                                Whether it is between husbands and wives, parents and children, co-workers on the job
-                                or fellow members in the church, it is impossible to live without disagreement.
-                                Therefore it is good to seek to discover certain basic principles whereby we
-                                may relate to those who differ from us.  
-                                
-                                CLICK TO READ MORE:
-                                
+                            Who does not encounter from time to time people who are not in complete agreement?
+                            Whether it is between husbands and wives, parents and children, co-workers on the job
+                            or fellow members in the church, it is impossible to live without disagreement.
+                            Therefore it is good to seek to discover certain basic principles whereby we
+                            may relate to those who differ from us.
+
+                            CLICK TO READ MORE:
+
                         </div>
                         <div class="collapsible-body">
                             <p class="indentation">
@@ -171,7 +211,8 @@
                             <p class="indentation">
                                 Under these circumstances one perhaps might desire to bypass a subject like this
                                 altogether. We are called upon by the Lord to contend earnestly for the faith
-                                (<a href="https://www.biblegateway.com/passage/?search=Jude+3&version=KJV" target="blank">Jude
+                                (<a href="https://www.biblegateway.com/passage/?search=Jude+3&version=KJV"
+                                    target="blank">Jude
                                     3 </a>). That does not necessarily involve being contentious; but it involves
                                 avoiding compromise, standing forth for what we believe, standing forth for the truth
                                 of God—without welching at any particular moment. Thus we are bound to meet, at various
@@ -227,7 +268,8 @@
                                 nor indifference. But what we owe that person who differs from us, whoever that may be,
                                 is what we owe every human being—we owe them love. And we owe it to them to deal with
                                 them as we ourselves would like to be dealt with or treated.
-                                <a href="https://www.biblegateway.com/passage/?search=Matthew+7.12&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=Matthew+7.12&version=KJV"
+                                    target="blank">
                                     (Matthew 7:12). </a>
                             </p>
 
@@ -338,8 +380,10 @@
                                 would lead to modalism.
                             </p>
                             <p class="indentation">
-                                In the controversy between <a href="https://en.wikipedia.org/wiki/Calvinism" target="blank">
-                                    Calvinism</a> and <a href="https://en.wikipedia.org/wiki/Arminianism" target="blank"></a>Arminianism</a>,
+                                In the controversy between <a href="https://en.wikipedia.org/wiki/Calvinism"
+                                    target="blank">
+                                    Calvinism</a> and <a href="https://en.wikipedia.org/wiki/Arminianism"
+                                    target="blank"></a>Arminianism</a>,
                                 it must be understood that many Arminians (possibly almost all of them) believed that
                                 to affirm the complete sovereignty of God inevitably implies a rejection of any free
                                 will, power of decision, and even responsibility on the part of created rational
@@ -394,11 +438,13 @@
                                 is very important, for otherwise any discussion is doomed to remain unproductive. The
                                 truth that I believe I have grasped must be presented in a spirit of love and
                                 winsomeness. To do otherwise is to do detriment to truth itself, for it is more
-                                naturally allied to love than to hostility ( <a href="https://www.biblegateway.com/passage/?search=Ephesians+4.15&version=KJV"
+                                naturally allied to love than to hostility ( <a
+                                    href="https://www.biblegateway.com/passage/?search=Ephesians+4.15&version=KJV"
                                     target="blank"> Ephesians 4:15 </a>). Belligerence or sarcasm may, in fact, reflect
                                 a certain insecurity that is not warranted when one is really under the sway of truth.
                                 It may well be that God’s servant may be moved to righteous indignation in the presence
-                                of those “who suppress the truth by their wickedness” (<a href="https://www.biblegateway.com/passage/?search=Romans+1.18&version=KJV"
+                                of those “who suppress the truth by their wickedness” (<a
+                                    href="https://www.biblegateway.com/passage/?search=Romans+1.18&version=KJV"
                                     target="blank">Romans 1:18</a>). This explains the outbursts of the Old
                                 Testament prophets, of our Lord in His denunciation of the Pharisees, and of the
                                 apostles in dealing with various heresies and hypocrisies in the early church.
@@ -409,15 +455,18 @@
                                 point which left no room for the hope of recovery
                                 (<a href="https://www.biblegateway.com/passage/?search=Psalm+139.19-22&version=KJV"
                                     target="blank">Psalm 139:19-22</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Isaiah+5.8-25&version=KJV" target="blank">Isaiah
+                                <a href="https://www.biblegateway.com/passage/?search=Isaiah+5.8-25&version=KJV"
+                                    target="blank">Isaiah
                                     5:8-25</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Daniel+5.26-30&version=KJV"
                                     target="blank">Daniel 5:26-30</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Matthew+12.30-32&version=KJV"
                                     target="blank">Matthew
                                     12:30-32</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Acts+7.51-53&version=KJV" target="blank">Acts
-                                    7:51-53</a>; <a href="https://www.biblegateway.com/passage/?search=Galatians+5.12&version=KJV"
+                                <a href="https://www.biblegateway.com/passage/?search=Acts+7.51-53&version=KJV"
+                                    target="blank">Acts
+                                    7:51-53</a>; <a
+                                    href="https://www.biblegateway.com/passage/?search=Galatians+5.12&version=KJV"
                                     target="blank">Galatians 5:12</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Revelation+22.15&version=KJV"
                                     target="blank"> Revelation 22:15</a>).
@@ -573,22 +622,29 @@
                                 thoughts so that readers will not be permitted to wander away, but will gain a proper
                                 understanding of the truth.There are many other examples of this approach in the
                                 Pauline writings
-                                (<a href="https://www.biblegateway.com/passage/?search=Romans+3.3&version=KJV" target="blank">Romans
+                                (<a href="https://www.biblegateway.com/passage/?search=Romans+3.3&version=KJV"
+                                    target="blank">Romans
                                     3:3</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Romans+6.15&version=KJV" target="blank">6:15</a>,
-                                <a href="https://www.biblegateway.com/passage/?search=Romans+6.19&version=KJV" target="blank">19</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Romans+7.7&version=KJV" target="blank">7:7</a>,
-                                <a href="https://www.biblegateway.com/passage/?search=Romans+7.13&version=KJV" target="blank">13</a>;
+                                <a href="https://www.biblegateway.com/passage/?search=Romans+6.15&version=KJV"
+                                    target="blank">6:15</a>,
+                                <a href="https://www.biblegateway.com/passage/?search=Romans+6.19&version=KJV"
+                                    target="blank">19</a>;
+                                <a href="https://www.biblegateway.com/passage/?search=Romans+7.7&version=KJV"
+                                    target="blank">7:7</a>,
+                                <a href="https://www.biblegateway.com/passage/?search=Romans+7.13&version=KJV"
+                                    target="blank">13</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Galatians+2.17&version=KJV"
                                     target="blank"> Galatians 2:17</a>,
                                 <a href="https://www.biblegateway.com/passage/?search=Galatians+2.19&version=KJV"
                                     target="blank">19</a> etc.). Even our Lord took
                                 pains to rephrase or amplify some of His statements that the hearer had not rightly
-                                understood at first ( <a href="https://www.biblegateway.com/passage/?search=Matthew+13.18-23&version=KJV"
+                                understood at first ( <a
+                                    href="https://www.biblegateway.com/passage/?search=Matthew+13.18-23&version=KJV"
                                     target="blank">Matthew 13:18-23</a>,
                                 <a href="https://www.biblegateway.com/passage/?search=Matthew+13.37-43&version=KJV"
                                     target="blank"> 37-43</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=John+11.12-14&version=KJV" target="blank"></a>John
+                                <a href="https://www.biblegateway.com/passage/?search=John+11.12-14&version=KJV"
+                                    target="blank"></a>John
                                 11:12-14, etc.).
                             </p>
                             <p class="indentation">
@@ -611,13 +667,15 @@
                                     target="blank"> 21</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Proverbs+13.14&version=KJV"
                                     target="blank"> 13:14</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Proverbs+15.1&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=Proverbs+15.1&version=KJV"
+                                    target="blank">
                                     15:1</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Proverbs+24.26&version=KJV"
                                     target="blank"> 24:26</a>;
                                 <a href="https://www.biblegateway.com/passage/?search=Proverbs+25.11&version=KJV"
                                     target="blank"> 25:11</a>;
-                                <a href="https://www.biblegateway.com/passage/?search=James+3&version=KJV" target="blank">James
+                                <a href="https://www.biblegateway.com/passage/?search=James+3&version=KJV"
+                                    target="blank">James
                                     3</a>).
                             </p>
                             <hr>
@@ -677,7 +735,8 @@
                                 pronouncements vested with divine authority without regard to the way in which they are
                                 introduced in Holy Writ. A notable example of this wrong approach would be to claim
                                 that God sanctions the statement, “There is no God” because it is found in
-                                <a href="https://www.biblegateway.com/passage/?search=Psalm+14.1&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=Psalm+14.1&version=KJV"
+                                    target="blank">
                                     Psalm 14:1</a>
                                 and <a href="https://www.biblegateway.com/passage/?search=Psalm+53.1&version=KJV"
                                     target="blank">53:1</a>.
@@ -688,7 +747,8 @@
                                 are as damaging to a position as a claim to be grounded in the authority of God’s Word,
                                 only to find that a more careful examination of the text in its context cancels out the
                                 support it was presumed to give. An argument of this type, like the house built on
-                                sand, “falls with a great crash” ( <a href="https://www.biblegateway.com/passage/?search=Matthew+7.27&version=KJV"
+                                sand, “falls with a great crash” ( <a
+                                    href="https://www.biblegateway.com/passage/?search=Matthew+7.27&version=KJV"
                                     target="blank">Matthew 7:27 </a>).
                             </p>
                             <p class="indentation">
@@ -703,16 +763,20 @@
                             <p class="indentation">
                                 All this demands that we should know the Word of God. God entrusted the sacred
                                 Scriptures to His people in order that they may search it diligently (
-                                <a href="https://www.biblegateway.com/passage/?search=John+5.39&version=KJV" target="blank">John
+                                <a href="https://www.biblegateway.com/passage/?search=John+5.39&version=KJV"
+                                    target="blank">John
                                     5:39 </a>) and make it the object of their daily meditation (
-                                <a href="https://www.biblegateway.com/passage/?search=Psalm+119&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=Psalm+119&version=KJV"
+                                    target="blank">
                                     Psalm 119</a>). To be acquainted with the whole counsel of God (
-                                <a href="https://www.biblegateway.com/passage/?search=Acts+20.27&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=Acts+20.27&version=KJV"
+                                    target="blank">
                                     Acts 20:27</a>) must be the aim not only of “professionals” like pastors and
                                 professors, but of everyone who wants to be known as a Christian. To be sound in the
                                 interpretation, correlation and application of the Scriptures is the way “to be
                                 approved, a workman who does not need to be ashamed” (
-                                <a href="https://www.biblegateway.com/passage/?search=2Timothy+2.15&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=2Timothy+2.15&version=KJV"
+                                    target="blank">
                                     2 Timothy 2:15</a>), and every child of God ought to aspire to that.
                             </p>
                             <p class="indentation">
@@ -829,13 +893,15 @@
                                 Furthermore, it is sometimes effective to challenge a person who differs from us to
                                 articulate an alternative approach which we may then proceed to criticize. For
                                 instance, a person who denies the deity of Christ may well be pressed to give his or
-                                her answer to Jesus’ question, “Who do you say that I am?” (<a href="https://www.biblegateway.com/passage/?search=Matthew+16.15&version=KJV"
+                                her answer to Jesus’ question, “Who do you say that I am?” (<a
+                                    href="https://www.biblegateway.com/passage/?search=Matthew+16.15&version=KJV"
                                     target="blank"> Matthew 16:15</a>). Any answer short of full deity
                                 may be shown as deeply unsatisfactory, as leading to some form of polytheism or
                                 as falling utterly to account for the facts of the life, death and resurrection of
                                 Christ. It may be hoped that those who have unsatisfactory views may then leave the
                                 smoldering ruins of their system and take refuge in the solid edifice of the faith
-                                “once for all entrusted to the saints” (<a href="https://www.biblegateway.com/passage/?search=Jude+3&version=KJV"
+                                “once for all entrusted to the saints” (<a
+                                    href="https://www.biblegateway.com/passage/?search=Jude+3&version=KJV"
                                     target="blank"> Jude 3</a>).
                             </p>
                             <p class="indentation">
@@ -921,19 +987,23 @@
                                 challenge us anew to understand those who differ in order to present the arguments that
                                 are most likely to be persuasive to them. God has appointed all of us to be witnesses
                                 to the truth. (
-                                <a href="https://www.biblegateway.com/passage/?search=John+1.7&version=KJV" target="blank">
+                                <a href="https://www.biblegateway.com/passage/?search=John+1.7&version=KJV"
+                                    target="blank">
                                     John 1:7 </a>;
-                                <a href="https://www.biblegateway.com/passage/?search=Acts+1.8&version=KJV" target="blank">Acts
+                                <a href="https://www.biblegateway.com/passage/?search=Acts+1.8&version=KJV"
+                                    target="blank">Acts
                                     1:8</a>) God is the one who can and will give efficacy to
                                 this witness. We should never underestimate His ability to deal even with those who
                                 appear most resistant. Who would have thought that Stephen could actually reach the
                                 heart and mind of anyone in the lynch mob that put him to death? But his great
                                 discourse was actually sowing goads in the very heart and conscience of Saul (
-                                <a href="https://www.biblegateway.com/passage/?search=Acts+26.14&version=KJV" target="blank">Acts
+                                <a href="https://www.biblegateway.com/passage/?search=Acts+26.14&version=KJV"
+                                    target="blank">Acts
                                     26:14</a>). Acts 7 shows that his argument was sealed by his Christ-like spirit in
                                 the face
                                 of this atrocious murder (
-                                <a href="https://www.biblegateway.com/passage/?search=Acts+7.59-60&version=KJV" target="blank">Acts
+                                <a href="https://www.biblegateway.com/passage/?search=Acts+7.59-60&version=KJV"
+                                    target="blank">Acts
                                     7:59-60</a>). His witness was used by God to win over
                                 perhaps the ablest of his adversaries, who was to be the great apostle Paul!
                             </p>
@@ -971,22 +1041,27 @@
     <hr />
     <!--Footer-->
     <footer class="page-footer transparent">
-            <div class="container center black-text"> 
-               <a href="#logo"><i class="material-icons">vertical_align_top</i></a>  <br>
-                Top
-                <br/>
-                <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
-            </div>
-            <div class="footer-copyright blue-grey darken-3">
-                <div class="container center-align">&copy; 2019 Classical Baptist Press</div>
-            </div>
-            <div class="footer-copyright blue-grey darken-3 ">
-                    <span  class="container center" id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script></span>
-                </div>
-        </footer>
+        <div class="container center black-text">
+            <a href="#logo"><i class="material-icons">vertical_align_top</i></a> <br>
+            Top
+            <br />
+            <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
+        </div>
+        <div class="footer-copyright blue-grey darken-3">
+            <div class="container center-align">&copy; 2019 Classical Baptist Press</div>
+        </div>
+        <div class="footer-copyright blue-grey darken-3 ">
+            <span class="container center" id="siteseal">
+                <script async type="text/javascript"
+                    src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script>
+            </span>
+        </div>
+    </footer>
 
     <!--Scripts-->
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>$(document).ready(function () {
@@ -995,6 +1070,7 @@
             $('.parallax').parallax();
             $('.scrollspy').scrollSpy();
             $('.collapsible').collapsible();
+            $('.modal').modal();
         })</script>
 </body>
 
