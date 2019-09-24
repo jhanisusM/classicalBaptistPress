@@ -15,7 +15,7 @@
     <!-- css main style -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <!-- Load Stripe.js on your website. -->
-    <script src="https://js.stripe.com/v3"></script>
+    <script type="text/javascript" src="https://js.stripe.com/v3"></script>
 </head>
 
 <body>
@@ -66,14 +66,24 @@
         </div>
         <!-- 28 Truths -->
         <div class="row">
+            
             <div class="col s12 l4 push-l7 offset-l1">
                 <img src="assets/images/28.JPG" alt="portrait" class="responsive-img materialboxed">
                 <br>
-                <button class="btn blue-grey darken-3" id="checkout-button-sku_FmzE9du2jC7IGE" role="link">
-                    <a href="" class=" white-text modal-trigger"> Click to
-                        Purchase</a>
-                    <i class="material-icons right">shopping_cart</i>
-                </button>
+                <!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button class="btn blue-grey darken-3
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
+  id="checkout-button-sku_FmzE9du2jC7IGE"
+  role="link"
+>
+<i class="material-icons right">shopping_cart</i>
+Click to Purchase
+</button>
+                <div id="error-message"></div>
+
                 <script>
                     var stripe = Stripe('pk_live_uVdFif1mqEmv2Qh53qBTTjRC00qWWfmIvH');
 
