@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\js.stripe.com",
+    "\\assets\\css",
+    "\\assets\\images",
     "\\success"
   ],
-  "SelectedNode": "\\success\\success=%h+qEkmZjkdyEeNZQnitWVcGgEsO9GwHqDvgeSjTLu5U+kiEfAkEA76QoJuzcluc.html",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }

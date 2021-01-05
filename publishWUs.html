@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en-US">
 
@@ -10,103 +10,109 @@
     <!--Google library-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cardo|Cinzel+Decorative|Cinzel" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- css main style -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("./assets/images/pub.jpg");
+            /* Set a specific height */
+            height: 300px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
     <!--Navigation Bar -->
-    <nav class="nav-wrapper blue-grey darken-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="./index.html" class="brand-logo" id="logo"> <i class="large material-icons left">blur_on</i>
-                Classical Baptist
-                Press </a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="./index.html"><i class="small material-icons left "> blur_linear</i>About</a></li>
-                <li><a href="./publication.html"><i class="small material-icons left"> book</i>Publications </a></li>
-                <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
-                <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
-                <li><a href="#publishWUs"><i class="small material-icons left">add</i>Publish With Us</a></li>
+            <a href="./index.html" class="navbar-brand" id="logo">Classical Baptist Press</a>
+            <button class="navbar-toggler"
+                    type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </ul>
-
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./publication.html">Publications</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./media.html">Media</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#publishWUs">Publish With Us</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <!--Navigation Collapse menue-->
-    <ul class="sidenav" id="mobile-links">
-        <li><a href="./index.html"><i class="small material-icons left ">blur_linear</i>About</a></li>
-        <li><a href="./publication.html"><i class="small material-icons left"> book</i>Publications </a></li>
-        <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
-        <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
-        <li><a href="#publishWUs"><i class="small material-icons left">add</i>Publish With Us</a></li>
-    </ul>
 
-
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="./assets/images/pub.jpg" alt="Books" class="responsive-img" />
-        </div>
-    </div>
-
+    <!-- Container element -->
+    <div class="parallax"></div>
+    <br />
     <!--Main Body-->
-    <section class="container section scrollspy" id="contact">
+    <section class="container" id="wrap">
         <div class="row">
-            <h3 class="secTitle center blue-grey-text text-darken-3" id="header">Publish With Us</h3>
-            <hr>
-            <br>
-            <div class=" col s12 l12 " style="text-align: center">
+            <div class="col">
+                <h3 class="secTitle center " id="header">Publish With Us</h3>
+                <hr>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="text-align: center">
                 <strong> </strong>
-                <p ></p>
-                        Do you have a manuscript that you would like to have published? 
-                        <br/>
-                        <br/>
-                        Are you interested in publishing with Classical Baptist Press? 
-                        <br/>
-                        <br/>
-                        For further information and guidelines to follow for manuscript submission and review contact: 
-                </p>
+                <p></p>
+                Do you have a manuscript that you would like to have published?
+                <br />
+                <br />
+                Are you interested in publishing with Classical Baptist Press?
+                <br />
+                <br />
+                For further information and guidelines to follow for manuscript submission and review contact:
                 <p>
                     <a href="mailto:publisher@classicalbaptistpress.com" target="_top">
-                            publisher@classicalbaptistpress.com</a>
+                        publisher@classicalbaptistpress.com
+                    </a>
                 </p>
-
-               
             </div>
-
         </div>
     </section>
     <hr />
     <!--Footer-->
-    <footer class="page-footer transparent">
-        <div class="container center">
-            <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
+    <footer class="">
+        <div class="center-align" style="text-align:center">
+            <a href="#logo"><i class="material-icons">vertical_align_top</i></a> <br>
+            Top
         </div>
-        <div class="footer-copyright blue-grey darken-3">
+        <br />
+        <div class="footer">
             <div class="container center-align">&copy; 2019 Classical Baptist Press</div>
+            <br />
+            <span class="center" id="siteseal">
+                <script async type="text/javascript"
+                        src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script>
+            </span>
         </div>
-        <div class="footer-copyright blue-grey darken-3 ">
-                <span  class="container center" id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script></span>
-            </div>
     </footer>
 
     <!--Scripts-->
-   <!-- jquery -->
-   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <!-- stripe -->
-   <script src="https://js.stripe.com/v3/"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>$(document).ready(function () {
-            $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
-            $('.parallax').parallax();
-            $('.scrollspy').scrollSpy();
-        })</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+
+    </script>
 </body>
 
 </html>

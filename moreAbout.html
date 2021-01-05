@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en-US">
 
@@ -10,63 +10,76 @@
     <!--Google library-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cardo|Cinzel+Decorative|Cinzel" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- css main style -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("./assets/images/clouds.jpg");
+            /* Set a specific height */
+            height: 400px;
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
     <!--Navigation Bar -->
-    <nav class="nav-wrapper blue-grey darken-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a href="./index.html" class="brand-logo" id="logo"> <i class=" material-icons left">blur_on</i> Classical
-                Baptist Press </a>
-            <a href="#" class="sidenav-trigger" data-target="mobile-links">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="./index.html"><i class="small material-icons left "> blur_linear</i>About</a></li>
-                <li><a href="./publication.html"><i class="small material-icons left"> book</i>Publications </a></li>
-                <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
-                <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
-                <li><a href="./publishWUs.html"><i class="small material-icons left">add</i>Publish With Us</a></li>
-
-            </ul>
-
+            <a href="./index.html" class="navbar-brand" id="logo">Classical Baptist Press </a>
+            <button class="navbar-toggler"
+                    type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="./index.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./publication.html">Publications</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./media.html">Media</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./publishWUs.html">Publish With Us</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <!--Navigation Collapse menue-->
-    <ul class="sidenav" id="mobile-links">
-        <li><a href="./index.html"><i class="small material-icons left "> blur_linear</i>About</a></li>
-        <li><a href="./publication.html"><i class="small material-icons left"> book</i>Publications </a></li>
-        <li><a href="./contact.html"><i class="small material-icons left">contact_mail</i>Contact</a></li>
-        <li><a href="./media.html"><i class="small material-icons left">link</i>Media</a></li>
-        <li><a href="./publishWUs.html"><i class="small material-icons left">add</i>Publish With Us</a></li>
-    </ul>
 
-    <!--Paralax-->
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="./assets/images/clouds.jpg" alt="Clouds" class="responsive-img" />
-        </div>
-    </div>
-
+    <!-- Container element -->
+    <div class="parallax"></div>
+    <br />
     <!--Main Body-->
-    <section class="container section scrollspy" id="about">
+    <section class="container" id="wrap">
         <div class="row">
-            <h3 class="secTitle center blue-grey-text text-darken-3" id="header">About</h3>
-            <hr>
+            <div class="col">
+                <h3 class="secTitle center blue-grey-text text-darken-3" id="header">About</h3>
+                <hr>
+            </div>
             <br>
-            <div class="col s12 l4">
-                <img src="./assets/images/puritans.jpg" alt="Puritans" class="responsive-img materialboxed">
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <img src="./assets/images/puritans.jpg" alt="Puritans" class="img-fluid materialboxed" style="width:350px">
                 <br>
             </div>
-            <div class=" col s12 l6 offset-l1">
+            <div class="col">
                 <strong>
                     What Is A Classical Baptist Church?
-                    By Dr. John S. Waldrip
+                    <br />
+                    <small>
+                        By Dr. John S. Waldrip
+                    </small>
                 </strong>
+                <br />
+                <br />
                 <p class="indentation">
                     What is a classical Baptist Church? Let me begin by answering that there is no unanimity among
                     Baptists on this issue since Baptists have historically been committed to the autonomy of the local
@@ -78,9 +91,10 @@
                     First, classical Baptists are Baptists that are committed to Gospel preaching. Strange as this may
                     sound, many these days (including Baptists) seem to have abandoned Gospel preaching in favor of
                     what is commonly referred to as expository preaching. However, the risen Savior related all
-                    Scripture to Himself in <a
-                        href="https://www.biblegateway.com/passage/?search=Luke+24:27&version=KJV" target="blank"> Luke
-                        24.27 </a>.
+                    Scripture to Himself in <a href="https://www.biblegateway.com/passage/?search=Luke+24:27&version=KJV" target="blank">
+                        Luke
+                        24.27
+                    </a>.
 
                     Thus, real exposition of God’s Word involves showing how everything in the Bible points to the
                     Gospel. No wonder some of the most astute Bible preachers in history (among them notable Baptists)
@@ -114,69 +128,102 @@
                     unwarranted and dangerous violation of the biblical principle that nothing is to be accepted as
                     true which does not have the attestation of two or three witnesses of fact (
                     <a href="https://www.biblegateway.com/passage/?search=Numbers+35%3A30&version=KJV"
-                        target="blank">Numbers
-                        35.30 </a>;
+                       target="blank">
+                        Numbers
+                        35.30
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Deuteronomy+17%3A6-7&version=KJV"
-                        target="blank">Deuteronomy
-                        17.6-7</a>;
+                       target="blank">
+                        Deuteronomy
+                        17.6-7
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Joshua+24%3A22&version=KJV"
-                        target="blank">Joshua
-                        24.22</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=ruth+4%3A9-11&version=KJV" target="blank">Ruth
-                        4.9-11</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=Job+10.17&version=KJV" target="blank">Job
-                        10.17</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=Isaiah+8.2&version=KJV" target="blank">Isaiah
-                        8.2</a>;
+                       target="blank">
+                        Joshua
+                        24.22
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=ruth+4%3A9-11&version=KJV" target="blank">
+                        Ruth
+                        4.9-11
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=Job+10.17&version=KJV" target="blank">
+                        Job
+                        10.17
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=Isaiah+8.2&version=KJV" target="blank">
+                        Isaiah
+                        8.2
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Isaiah+43.9-12&version=KJV"
-                        target="blank">43.9-12</a>;
-                    <a href=https://www.biblegateway.com/passage/?search=Isaiah+44.8-9&version=KJV"
-                        target="blank">44.8-9</a>;
+                       target="blank">43.9-12</a>;
+                    <a href=https://www.biblegateway.com/passage/?search =Isaiah+44.8-9&version =KJV"
+                       target="blank">44.8-9</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Jeremiah+32.10&version=KJV"
-                        target="blank">Jeremiah
-                        32.10</a>,
+                       target="blank">
+                        Jeremiah
+                        32.10
+                    </a>,
                     <a href="https://www.biblegateway.com/passage/?search=Jeremiah+12&version=KJV"
-                        target="blank">12</a>,
+                       target="blank">12</a>,
                     <a href="https://www.biblegateway.com/passage/?search=Jeremiah+25&version=KJV"
-                        target="blank">25</a>,
+                       target="blank">25</a>,
                     <a href="https://www.biblegateway.com/passage/?search=Jeremiah+44&version=KJV"
-                        target="blank">44</a>;
+                       target="blank">44</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Matthew+18.15-20&version=KJV"
-                        target="blank">Matthew
-                        18.15-20</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=Luke+24.46-48&version=KJV" target="blank">Luke
-                        24.46-48</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=Acts+1.8&version=KJV" target="blank">Acts
-                        1.8</a>;
+                       target="blank">
+                        Matthew
+                        18.15-20
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=Luke+24.46-48&version=KJV" target="blank">
+                        Luke
+                        24.46-48
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=Acts+1.8&version=KJV" target="blank">
+                        Acts
+                        1.8
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Acts+2.32&version=KJV"
-                        target="blank">2.32</a>;
+                       target="blank">2.32</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Acts+3.15&version=KJV"
-                        target="blank">3.15</a>;
+                       target="blank">3.15</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Acts+5.32&version=KJV"
-                        target="blank">5.32</a>;
+                       target="blank">5.32</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Acts+10.39-40&version=KJV"
-                        target="blank">10.39-40</a>;
+                       target="blank">10.39-40</a>;
                     <a href="https://www.biblegateway.com/passage/?search=Acts+13.31&version=KJV"
-                        target="blank">13.31</a>;
+                       target="blank">13.31</a>;
                     <a href="https://www.biblegateway.com/passage/?search=2+Corinthians+13.1&version=KJV"
-                        target="blank">2
-                        Corinthians 13.1</a>;
+                       target="blank">
+                        2
+                        Corinthians 13.1
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=1+Thessalonians+2.10&version=KJV"
-                        target="blank">1
-                        Thessalonians 2.10</a>;
-                    <a href="https://www.biblegateway.com/passage/?search=1+Timothy+5.19&version=KJV" target="blank">1
-                        Timothy 5.19</a>,
+                       target="blank">
+                        1
+                        Thessalonians 2.10
+                    </a>;
+                    <a href="https://www.biblegateway.com/passage/?search=1+Timothy+5.19&version=KJV" target="blank">
+                        1
+                        Timothy 5.19
+                    </a>,
                     <a href="https://www.biblegateway.com/passage/?search=1+Timothy+6.12&version=KJV" target="blank">
-                        6.12</a>;
+                        6.12
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Hebrews+10.28&version=KJV"
-                        target="blank">Hebrews
-                        10.28</a>;
+                       target="blank">
+                        Hebrews
+                        10.28
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=1+John+4.1%3B+5.7-9&version=KJV"
-                        target="blank">1
-                        John 4.1; 5.7-9</a>;
+                       target="blank">
+                        1
+                        John 4.1; 5.7-9
+                    </a>;
                     <a href="https://www.biblegateway.com/passage/?search=Revelation+1.1%3B+2.2&version=KJV"
-                        target="blank">Revelation
-                        1.1; 2.2</a>).
+                       target="blank">
+                        Revelation
+                        1.1; 2.2
+                    </a>).
                 </p>
                 <p class="indentation">
                     Fourth, classical Baptists are convinced the new birth is a transformative miracle that is wrought
@@ -205,8 +252,10 @@
                     Pentecost, and subsequently divided into multiple congregations that established other Churches.
                     Only in heaven will the Church be universal and consist of all Church Age believers in Jesus Christ
                     (<a href="https://www.biblegateway.com/passage/?search=Hebrews+12.23&version=KJV"
-                        target="blank">Hebrews
-                        12.23</a>).
+                        target="blank">
+                        Hebrews
+                        12.23
+                    </a>).
                 </p>
                 <p class="indentation">
                     Finally, classical Baptists are missionary Baptists, recognizing our Great Commission is rightly
@@ -222,44 +271,35 @@
             </div>
 
         </div>
+        <hr />
     </section>
-    <hr />
     <!--Footer-->
-    <footer class="page-footer transparent">
-        <div class="container center black-text">
+    <footer class="">
+        <div class="center-align" style="text-align:center">
             <a href="#logo"><i class="material-icons">vertical_align_top</i></a> <br>
             Top
-            <br />
-            <img style=" max-width: 100px" src="./assets/images/scroll.PNG" />
         </div>
-        <div class="footer-copyright blue-grey darken-3">
+        <br />
+        <div class="footer">
             <div class="container center-align">&copy; 2019 Classical Baptist Press</div>
-        </div>
-        <div class="footer-copyright blue-grey darken-3 ">
-            <span class="container center" id="siteseal">
+            <br />
+            <span class="center" id="siteseal">
                 <script async type="text/javascript"
-                    src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script>
-                </span>
+                        src="https://seal.godaddy.com/getSeal?sealID=BCxH2EEjimBHzHtUGLeIYZJwNDKpE9SOUXPG7TIcFIq5FMKbjzx4nBx60PqS"></script>
+            </span>
         </div>
     </footer>
 
     <!--Scripts-->
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- stripe -->
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        var stripe = Stripe('pk_test_D0deZh76fwVEwK8r1Utp1jge00S6qFVyv9');
-        var elements = stripe.elements();
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+
     </script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>$(document).ready(function () {
-            $('.sidenav').sidenav();
-            $('.materialboxed').materialbox();
-            $('.parallax').parallax();
-            $('.scrollspy').scrollSpy();
-        })</script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+
+    </script>
 </body>
 
 </html>
